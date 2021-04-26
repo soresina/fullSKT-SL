@@ -13,7 +13,9 @@ To obtain the bifurcation diagrams (Fig.2), we refer to the GitHub folder fullSK
 https://github.com/soresina/fullSKT
 
 To compute the branches starting from a Hopf point, use:
+
 %---------------------------------------------------------------------------------
+
 %% Hopf bifs from HBPs
 para=4; ds=0.1; dsmax=0.5; xi=1e-1; nsteps=50; figure(2); clf; 
 aux=[]; aux.tl=30; 
@@ -21,4 +23,5 @@ p=hoswibra('bpt1_up','hpt1',ds,para,'1dh1',aux);
 p.hopf.xi=xi; p.hopf.jac=1; p.nc.dsmax=dsmax; p.sw.verb=2;  p.file.smod=1; 
 p=setbel(p,2,1e-4,5,@lss); p.hopf.fltol=1e-3; 
 t1=tic; p=cont(p,nsteps); toc(t1) 
+
 %---------------------------------------------------------------------------------
